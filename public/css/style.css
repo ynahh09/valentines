@@ -1,0 +1,174 @@
+body {
+    background-image: url('../images/bgvalen.png');
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    background-size: cover; /* Makes the background image cover the whole page */
+    color: red;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+#no-button {
+    margin: 0 10px;
+    color: white;
+    background-color: red;
+    height: 40px !important;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 12px 24px;
+
+    p {
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+#yes-button {
+    margin: 0 10px;
+    color: white;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 20px;
+    padding: 12px 24px;
+
+    p {
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+/* Make responsive for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+}
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-gif {
+    
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    img {
+        width: auto;
+        height: 250px;
+    }
+}
+
+.language-selector {
+    margin-top: 30px;
+    position: unset;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.language-selector label {
+    margin-right: 10px;
+}
+
+.language-selector select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.creator {
+    text-decoration: none;
+    color: #333;
+}
+
+.creator:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+.creator:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+/* CSS For Mobile */
+@media (max-width: 768px) {
+    .language-selector {
+        position: unset;
+        margin-top: 30px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* Image button inside message */
+.img-button {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.img-button img {
+    width: 200px;          /* change size if you want */
+    height: auto;
+    border-radius: 20px;   /* curvy button */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.img-button img:hover {
+    transform: scale(1.05);
+}
+
+.message {
+    display: none;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
